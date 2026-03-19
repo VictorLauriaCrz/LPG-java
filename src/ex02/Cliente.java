@@ -6,15 +6,14 @@ public class Cliente {
     Pedido[] pedido;
     int index;
 
-
     public Cliente(String nome, long cpf, int totalPedidos) {
         this.nome = nome;
         this.cpf = cpf;
         this.pedido = new Pedido[totalPedidos];
     }
 
-    public double adicionarPedido(Pedido pedido) {
-        if (index < this.pedido.length){
+    public void adicionarPedido(Pedido pedido) {
+        if (index < this.pedido.length) {
             this.pedido[index] = pedido;
             index++;
         }
