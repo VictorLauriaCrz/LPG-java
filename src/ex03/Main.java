@@ -19,8 +19,12 @@ public class Main {
             opcao = sc.nextInt();
 
             switch (opcao){
-                case 1: cadastrar();
-                case 2: carregar();
+                case 1 -> cadastrar();
+                case 2 -> carregar();
+                case 3 -> consultarSaldo();
+                case 4 -> passarNaCatraca();
+                case 5 -> System.out.println("Até breve");
+                default -> System.out.println("opção inválida");
             }
         } while (opcao != 5);
     }
@@ -65,6 +69,24 @@ public static BilheteUnico pesquisar(){
             valor = sc.nextDouble();
             bilheteUnico.carregar(valor);
         }
+    }
+
+    private static void passarNaCatraca(){
+        BilheteUnico bilheteUNico = pesquisar();
+        if (bilheteUNico != null){
+            if (!bilheteUNico.passarNaCatraca()){
+                System.out.println("Saldo insuficiente");
+            }
+            System.out.println("saldo atual R$ " +bilheteUNico.saldo);
+        }
+    }
+
+    private static void consultarSaldo(){
+    BilheteUnico bilheteUnico = pesquisar();
+    if (bilheteUnico != null){
+        System.out.println("Saldo atual" +bilheteUnico.saldo);
+    }
+
     }
 }
 

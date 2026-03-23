@@ -24,12 +24,19 @@ public class BilheteUnico {
     }
 
     public double calcularTarifa() {
-        return 0.0;
+        double valor = tarifaBase / 2;
+        if (usuario.tipotarifa.equalsIgnoreCase("comun")){
+            valor = tarifaBase;
+
+        }        return valor;
     }
 
     public boolean passarNaCatraca() {
         double valor = calcularTarifa();
-
+    if (saldo < valor){
+        return false;
+    }
+        saldo -= valor;
         return true;
     }
 
