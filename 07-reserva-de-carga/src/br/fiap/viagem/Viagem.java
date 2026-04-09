@@ -14,10 +14,30 @@ public class Viagem {
     }
 
     public boolean permitirReservar(double peso){
+        double total = capacidadeReservar();
+        return (total + peso) > capacidade;
+    }
+    public boolean reservar(Carga carga){
+        if (permitirReservar((carga.getPeso()))) {
+        this.carga[index++] = carga;
+        return true;
+        }
+        return false;
+    }
+
+    public double capacidadeReservar(){
         double total = 0;
         for (int i = 0; i < index; i++){
-        total += carga[i].getPeso();
+            total += carga[i].getPeso();
         }
-        return (total + peso) > capacidade;
+        return total;
+    }
+
+    public String getDados(){
+        String aux = " ";
+        for (int i = 0; i < index; i++){
+             aux += carga[i].getDados();
+        }
+        return aux;
     }
 }
