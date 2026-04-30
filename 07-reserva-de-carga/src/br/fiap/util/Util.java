@@ -30,8 +30,12 @@ public class Util {
 
             else{
                 switch(opcao){
-                    case 1 -> reservar();
-                    case 4 -> capacidadeReservas();
+                    case 1:
+                        reservar();
+                        break;
+                    case 4:
+                        capacidadeReservas();
+                        break;
                 }
             }
         }

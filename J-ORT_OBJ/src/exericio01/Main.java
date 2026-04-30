@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println("Correntista -->");
         conta.correntista = sc.next();
-        conta.numero = rd.nextInt(1000, 9999);
+        conta.numero = rd.nextInt(9000) + 1000;
 
         conta.depositar(1000);
         System.out.println(conta.saldo);

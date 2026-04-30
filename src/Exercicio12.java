@@ -20,8 +20,12 @@ public class Exercicio12 {
         tipo = in.nextInt();
 
         switch(tipo) {
-            case 1 -> totalDaCompra = totalDaCompra * 0.9;
-            case 2 -> totalDaCompra = totalDaCompra * 1.155;
+            case 1:
+                totalDaCompra = totalDaCompra * 0.9;
+                break;
+            case 2:
+                totalDaCompra = totalDaCompra * 1.155;
+                break;
         }
 
         System.out.println("\nTotal final da compra R$ " + formato.format(totalDaCompra));

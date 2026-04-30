@@ -19,12 +19,24 @@ public class Main {
             opcao = sc.nextInt();
 
             switch (opcao){
-                case 1 -> cadastrar();
-                case 2 -> carregar();
-                case 3 -> consultarSaldo();
-                case 4 -> passarNaCatraca();
-                case 5 -> System.out.println("Até breve");
-                default -> System.out.println("opção inválida");
+                case 1:
+                    cadastrar();
+                    break;
+                case 2:
+                    carregar();
+                    break;
+                case 3:
+                    consultarSaldo();
+                    break;
+                case 4:
+                    passarNaCatraca();
+                    break;
+                case 5:
+                    System.out.println("Até breve");
+                    break;
+                default:
+                    System.out.println("opção inválida");
+                    break;
             }
         } while (opcao != 5);
     }

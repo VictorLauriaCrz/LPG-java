@@ -20,12 +20,12 @@ public class Carga {
 
     private int gerarId(){
         Random random = new Random();
-        return random.nextInt(1000, 9999);
+        return 1000 + random.nextInt(9000);
     }
 
     private double gerarPeso(){
         Random random = new Random();
-        return random.nextDouble(50, 90);
+        return 50 + random.nextDouble() * 40;
     }
 
     public String getDados(){

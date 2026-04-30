@@ -10,7 +10,7 @@ public class Pedido {
 
     public Pedido(String data, int totalitems) {
         Random random = new Random();
-        this.numero = random.nextInt(1000, 9999);
+        this.numero = random.nextInt(9000) + 1000;
         this.data = data;
         this.item = new item_Pedido[totalitems];
     }

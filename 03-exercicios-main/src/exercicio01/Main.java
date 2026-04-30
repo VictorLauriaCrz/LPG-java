@@ -12,7 +12,7 @@ public class Main {
         // entrada de dados
         System.out.print("Correntista --> ");
         conta.correntista = sc.next();
-        conta.numero = random.nextInt(1000, 10000);
+        conta.numero = random.nextInt(9000) + 1000;
 
         // imprime o saldo
         System.out.println("saldo atual: R$ " + conta.saldo);

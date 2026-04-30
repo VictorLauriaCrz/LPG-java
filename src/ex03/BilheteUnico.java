@@ -16,7 +16,7 @@ public class BilheteUnico {
 
     public int gerarNumero() {
         Random random = new Random();
-        return random.nextInt(1000, 9999);
+        return 1000 + random.nextInt(9000);
     }
 
     public void carregar(double valor) {
